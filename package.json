@@ -1,0 +1,16 @@
+{
+  "name": "undergroundrealmon",
+  "version": "1.0.0",
+  "description": "A parodie of the best game ever",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "pixi.js": "^8.16.0"
+  }
+}
