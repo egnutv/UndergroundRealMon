@@ -1,0 +1,63 @@
+{
+    "character_names": {
+        "player": {
+            "female": {
+                "name": "Laurina Ahornbaum"
+            },
+            "male": {
+                "name": "Lars Ahornbaum"
+            },
+            "nonbinary": {
+                "name": "Luca Ahornbaum"
+            }
+        },
+        "professor_leaves": {
+            "name": "Prof. Blattwerk"
+        },
+        "professor_fern": {
+            "name": "Prof. Farnkraut"
+        },     
+        "professor_moss": {
+            "name": "Prof. Moosblatt"
+        },
+        "doctor_ivy": {
+            "name": "Dr. Efeublatt"
+        },
+        "doctor_bamboo": {
+            "name": "Dr. Bambusblatt"
+        },
+        "doctor_cactus": {
+            "name": "Dr. Kaktusblatt"
+        }
+    },
+    "realmon_names": { 
+        "bear": {
+            "singular": "Bär",
+            "plural": "Bären"
+        },
+        "cat": {
+            "singular": "Katze",
+            "plural": "Katzen"
+        },
+        "dog": {
+            "singular": "Hund",
+            "plural": "Hunde"
+        },
+        "frog": {
+            "singular": "Frosch",
+            "plural": "Frösche"
+        },
+        "mouse": {
+            "singular": "Maus",
+            "plural": "Mäuse"
+        },
+        "rabbit": {
+            "singular": "Kaninchen",
+            "plural": "Kaninchen"
+        },
+        "wolf": {
+            "singular": "Wolf",
+            "plural": "Wölfe"
+        }
+    }
+}

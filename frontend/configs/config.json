@@ -1,0 +1,11 @@
+{
+    "langs": {
+        "added": ["de", "en"],
+        "default": "de"
+    },
+    "design_mode": {
+        "added": ["dark", "light"],
+        "default": "dark"
+    }
+
+}

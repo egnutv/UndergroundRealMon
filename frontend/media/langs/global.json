@@ -1,0 +1,28 @@
+{
+    "langs": {
+        "de": "deutsch",
+        "en": "english"
+    },
+    "credits": {
+        "developers": ["Mirco"],
+        "designers": ["Mirco"],
+        "testers": ["Mirco"],
+        "contributors": ["Mirco"],
+        "audio": {
+            "sounds": {
+
+            },
+            "music": {
+
+            }
+        },
+        "sources":{
+
+        },
+        "source_code":{
+            "link": "",
+            "licences": []
+        }
+        
+    }
+}

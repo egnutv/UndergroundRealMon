@@ -1,0 +1,61 @@
+{
+    "global": {
+        "settings": "Einstellungen",
+        "profile": "Profil",
+        "lang": "Sprache",
+        "langs_info": "Wechselt zur Sprache: $language$",
+        "save": "Speichern",
+        "start": "Start",
+        "pause": "Pause",
+        "cancel": "Abbrechen",
+        "reset": "Zurücksetzen",
+        "confirm": "Bestätigen",
+        "close": "Schließen",
+        "error": "Fehler",
+        "success": "Erfolg",
+        "warning": "Warnung",
+        "info": "Info",
+        "loading": "Laden...",
+        "load": "Laden",
+        "no_data": "Keine Daten verfügbar",
+        "unknown_error": "Ein unbekannter Fehler ist aufgetreten",
+        "main_title": "Underground RealMon",
+        "main_subtitle": "Eine Parodie auf das beste Spiel aller Zeiten",
+        "welcome": "Willkommen zu Underground RealMon!",
+        
+        "design_mode":
+        {
+            "info": "Wechseln zum Farbschema: $design_mode$",
+            "dark": "Dunkel",
+            "light": "Hell"
+        }
+    },
+    "texts": {
+        
+    },
+    "sites": {
+        "start": {
+            "title": "Willkommen zu Underground RealMon!",
+            "subtitle": "Eine Parodie auf das beste Spiel aller Zeiten"
+        },
+        "credits": {
+            "title": "Credits",
+            "subtitle": "Die Leute die Mitwirkten",
+            "developers": "Entwickler",
+            "designers": "Designer",
+            "testers": "Tester",
+            "sounds": "Sounds",
+            "audio": "Audio",
+            "music": "Musik",
+            "contributors": "Mitwirkende",
+            "license": "Lizenz",
+            "sources": "Quellen",
+            "source_code": "Quellcode"
+
+        },
+        "settings": {
+            "title": "Profil",
+            "subtitle": "Verwalte deine Einstellungen"
+        }
+    }
+}
