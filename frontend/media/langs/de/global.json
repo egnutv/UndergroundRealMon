@@ -27,8 +27,7 @@
         {
             "info": "Wechseln zum Farbschema: $design_mode$",
             "dark": "Dunkel",
-            "light": "Hell"
-        }
+            "light": "Hell"}
     },
     "texts": {
         
@@ -36,8 +35,7 @@
     "sites": {
         "start": {
             "title": "Willkommen zu Underground RealMon!",
-            "subtitle": "Eine Parodie auf das beste Spiel aller Zeiten"
-        },
+            "subtitle": "Eine Parodie auf das beste Spiel aller Zeiten"},
         "credits": {
             "title": "Credits",
             "subtitle": "Die Leute die Mitwirkten",

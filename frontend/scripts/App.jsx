@@ -1,29 +1,28 @@
-export class Main {
-  constructor({ PIXI, mountId }) {
-    this.PIXI = PIXI;
-    this.mountId = mountId;
-  }
+export class App {
+    constructor() {
 
-  async start() {
-    console.log("starting game");
+    }
 
-    //*const app = new this.PIXI.Application();
+    async start() {
+        console.log("starting game");
 
-    /*await app.init({
-        width: 800,
-        height: 600,
-        background: "#000000",
-        antialias: true,
-    });
+        //*const app = new this.PIXI.Application();
 
-    // v8: canvas statt view
-    /*Üdocument.getElementById(this.mountId).appendChild(app.canvas);
+        /*await app.init({
+            width: 800,
+            height: 600,
+            background: "#000000",
+            antialias: true,
+        });
 
-    // Test: etwas anzeigen
-    const gfx = new this.PIXI.Graphics()
-        .rect(50, 50, 200, 120)
-        .fill(0xff00ff);
+        // v8: canvas statt view
+        /*Üdocument.getElementById(this.mountId).appendChild(app.canvas);
 
-    app.stage.addChild(gfx);*/
+        // Test: etwas anzeigen
+        const gfx = new this.PIXI.Graphics()
+            .rect(50, 50, 200, 120)
+            .fill(0xff00ff);
+
+        app.stage.addChild(gfx);*/
     }
 }

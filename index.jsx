@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-//import * as PIXI from "pixi.js";
-import { Main } from "./frontend/scripts/App.jsx";
+import * as PIXI from "pixi.js";
+import { App } from "./frontend/scripts/App.jsx";
 
 /*
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -12,5 +12,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
 //const main = new Main({ PIXI, mountId: "game" });
 
-const main = new Main;
-main.start();
+const app = new App;
+app.start();
