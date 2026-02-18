@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import * as PIXI from "pixi.js";
 import { Main } from "./frontend/scripts/Main.jsx";
+import 
 
 /*
 ReactDOM.createRoot(document.getElementById("root")).render(
