@@ -1,7 +1,8 @@
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
-import './../styles/root.css';
+import "./../styles/root.css";
 
 export class Main {
     constructor() {
@@ -17,7 +18,7 @@ export class Main {
         root.render(element);
 
         const htmlDoc = document.getElementsByTagName("html");
-        htmlDoc.lang="de";
+        document.documentElement.lang = "de";
 
     
     }
