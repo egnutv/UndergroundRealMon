@@ -8,7 +8,7 @@ export default function Loading() {
 
     return (
 
-        <div className="loading-screen">
+        <div className="loading-screen" style={{height: "100%", width: "100%"}}>
             <LoadingCycle></LoadingCycle>
         </div>
 
