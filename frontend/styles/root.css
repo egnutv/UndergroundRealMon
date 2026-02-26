@@ -54,7 +54,10 @@
     --normal-grey: #bdbbb4;
     --dark-grey: #adadad;
     
-    
+    /* GRADIENTS */
+
+    --day-gradient: linear-gradient(to top, var(--dark-asphalt), var(--normal-blue), var(--light-cyan));
+    --night-gradient: linear-gradient(to top, var(--dark-asphalt), var(--dark-purple), var(--dark-blue));
 }
 
 *, .dark {

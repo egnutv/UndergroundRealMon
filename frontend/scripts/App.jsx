@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { useState } from 'react';
 
 import Start from './../components/sites/Start.jsx';
-import Loading from"./../components/sites/Loading.jsx";
+import Loading from"../components/sites/Loading.jsx";
 
 
 

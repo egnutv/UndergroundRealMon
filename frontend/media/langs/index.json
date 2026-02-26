@@ -1,0 +1,12 @@
+{
+    "langsPaths": {
+        "global": "global.json",
+
+        "specific": {
+            "global": "$lang$/global.json",
+            "game:": {
+                "name": "$lang$/game/names.json"
+            }
+        }
+    }
+}
