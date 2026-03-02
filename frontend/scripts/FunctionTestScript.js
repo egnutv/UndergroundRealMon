@@ -14,6 +14,11 @@ export class FunctionTestScript {
         console.log("testFunction called");
         const input = await this.testFetch();
         console.log("config.json:", input);
+
+        const lang = input.langs.default;
+        const design_mode = input.design_mode.added;
+        console.log("default language:", lang);
+        console.log("design mode:", design_mode);
     }
 
     async testFetch() {

@@ -20,8 +20,7 @@ export class Fetching {
      */
     async json(url) {
     return await this.fetching(url, async (response) => {
-        const raw = await response.text(); 
-        return JSON.parse(raw);
+        return await response.json();
     });
 }
 
