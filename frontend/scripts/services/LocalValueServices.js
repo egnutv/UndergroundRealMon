@@ -1,7 +1,7 @@
 import { Fetching } from "../utils/data/Fetching.js";
 import { Storage } from "../utils/data/storage/Storage.js";
 
-export class LocalValueService {
+export class LocalValueServices extends Storage {
 
     /**
      * 

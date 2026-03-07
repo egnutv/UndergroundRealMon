@@ -9,6 +9,10 @@ export class Storage {
         this.storage = storage;
     }
 
+    changeStorage(storage) {
+        this.storage = storage;
+    }
+
 
     /**
      * Sets a value in the storage with the specified key.
