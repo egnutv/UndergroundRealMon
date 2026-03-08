@@ -1,5 +1,6 @@
 import { Fetching } from "./utils/data/Fetching.js";
 import { Storage } from "./utils/data/storage/Storage.js";
+import { DomObserver} from "./services/observer/DomObserver.js";
 
 export class FunctionTestScript {
     constructor() {
@@ -23,6 +24,7 @@ export class FunctionTestScript {
 
         this.testStorage(sessionStorage);
         this.testStorage(localStorage);
+        this.testObserver();
     }
 
     async testFetch() {
@@ -31,11 +33,22 @@ export class FunctionTestScript {
     }
 
     testStorage(storage) {
+        const sName = Object.toString(storage);
         const s = new Storage(storage);
         s.set("testKey", "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
         const value = s.get("testKey");
-        console.log("storage - testKey:", value);
+        console.log(sName + "storage - testKey:", value);
         s.clear("testKey");
     }
+    testObserver() {
+    const domObserver = new DomObserver();
+    domObserver.observe(
+        document.body,
+        el => el.id.includes("dummy1"),
+        el => {
+            el.style.background = "blue";
+        }
+    );
+}
 
 }

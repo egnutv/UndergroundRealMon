@@ -15,7 +15,11 @@ export default function App() {
         {screen === "loading" && <Loading />}
         {screen === "start" && <Start />}
         
+        <div className='dummyElement' id='dummy1' style={{height: "100px", width: "100px", background: "red"} }>
+        
+        </div>
+    </div>
 
-    </div>);
+    );
 }
 
