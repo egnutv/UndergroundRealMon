@@ -16,10 +16,10 @@ export class TwoPointInterpolation {
      */
 
     constructor(
-        initValue = 90, 
-        finalValue = 70, 
-        initWidth = 1000, 
-        finalWidth = 3000,
+        initValue = 90, //percent value for example
+        finalValue = 70, //percent value for example
+        initWidth = 1000, //is a px value for example - (1000px display width)
+        finalWidth = 3000, //is a px value for example - (3000px display width)
         currentWidth = window.innerWidth) 
     {
         this.initValue = initValue;

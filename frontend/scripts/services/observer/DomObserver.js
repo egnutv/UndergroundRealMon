@@ -1,4 +1,13 @@
 class DomObserver {
+    /**
+     * Observes DOM changes and runs a callback when a matching element appears.
+     *
+     * @param {Element} target
+     * @param {(el: Element) => boolean} matcher
+     * @param {(el: Element, controls: object) => void} callback
+     * @returns {object} controls
+     */
+    
     observe(target = document.body, matcher, callback) {
         const root = target || document.body;
         const blackList = new WeakSet();

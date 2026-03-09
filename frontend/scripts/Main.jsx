@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./../styles/root.css";
 
-import {FunctionTestScript} from "./FunctionTestScript.js";
+import {FunctionDebugger} from "./FunctionDebugger.js";
 
 export class Main {
     constructor() {
@@ -13,8 +13,8 @@ export class Main {
 
     async start() {
 
-        const functionTestScript = new FunctionTestScript();
-        functionTestScript.run();
+        const functionTestScript = new FunctionDebugger();
+        functionTestScript.start();
 
         console.log("starting game");
 

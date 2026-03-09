@@ -12,7 +12,10 @@ export default function Start() {
                 Willkommen zu Underground RealMon
             </h1>
 
-            <div className="container" style={{display: "flex", flexDirection: "column", gap: "1rem", width: "50%"}}>
+            <div 
+            className="container"
+            style={{ display: "flex", flexDirection: "column", gap: "1rem", width: "50%" }}>
+
 
                 <Button>
                     Starten

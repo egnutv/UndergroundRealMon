@@ -15,7 +15,12 @@ export default function App() {
         {screen === "loading" && <Loading />}
         {screen === "start" && <Start />}
         
-        <div className='dummyElement' id='dummy1' style={{height: "100px", width: "100px", background: "red"} }>
+        <div className='dummyElement' id='dummy1' style={{height: "100px", width: "100px", background: "red"} }
+        data-sintpol="30%,100%,100px,1500px,window.innerWidth">
+        
+        </div>
+        <div className='dummyElement' id='dummy1' style={{height: "100px", width: "100px", background: "red"} }
+        data-sintpol="30%,100%,100px,1000px,window.innerWidth">
         
         </div>
     </div>
