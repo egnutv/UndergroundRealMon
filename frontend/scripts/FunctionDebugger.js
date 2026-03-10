@@ -32,33 +32,38 @@ export class FunctionDebugger {
         this.testTwoPointInterpolation();
         await this.testStorageFetch();
         new SintpolEngine().start()
+        await this.debugJsonDelivery();
         
     }
 
     async testFetch() {
-        const fetching = new Fetching();
-        return await fetching.json("/frontend/configs/config.json");
+        //const fetching = new Fetching();
+        //return await fetching.json("/frontend/configs/config.json");
+        const fetching = new Fetching(Response.prototype.json);
+        return await fetching.fetch("/frontend/configs/config.json");
     }
 
     testStorage(storage) {
         const sName = Object.toString(storage);
         const s = new Storage(storage);
-        s.set("testKey", "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
-        const value = s.get("testKey");
+        s.setItem("testKey", "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+        const value = s.getItem("testKey");
         console.log(sName + "storage - testKey:", value);
         s.clear("testKey");
     }
     async testStorageFetch() {
     const p = "/frontend/configs/config.json";
-    const f = await new Fetching().json(p);
+    //const f = await new Fetching().json(p);
+    const f = await new Fetching(Response.prototype.json).fetch("/frontend/configs/config.json");
+    
 
     const s = new Storage(sessionStorage);
-    s.set(p, JSON.stringify(f));
+    s.setItem(p, JSON.stringify(f));
 
-    if (s.exists(p)) {
+    if (s.existsItem(p)) {
         console.log("it exists");
 
-        const raw = s.get(p);
+        const raw = s.getItem(p);
         console.log("raw from storage:", raw);
 
         const parsed = JSON.parse(raw);
@@ -84,6 +89,15 @@ export class FunctionDebugger {
         const twoPointInterpolation = new TwoPointInterpolation();
         let num = twoPointInterpolation.calc(10, 90, 800, 3300, window.innerWidth);
         console.log("the current num is " + num);
+    }
+    async debugJsonDelivery() {
+        const { JsonDelivery } = await import("./utils/data/JsonDelivery.js");
+        const jd = new JsonDelivery(sessionStorage);
+        await console.log(jd.deliver("/frontend/configs/config.json"));
+        const demoData = await jd.deliver("/frontend/configs/config.json");
+        console.log("DemoData: " +  demoData.design_mode.added);
+        let demoDataVal = demoData.design_mode.added;
+        console.log(demoDataVal.length);
     }
 
 }

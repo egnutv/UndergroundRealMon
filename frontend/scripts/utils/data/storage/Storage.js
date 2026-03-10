@@ -9,9 +9,10 @@ export class Storage {
         this.storage = storage;
     }
 
-    changeStorage(storage) {
+    setStorage(storage) {
         this.storage = storage;
     }
+
 
 
     /**
@@ -19,7 +20,7 @@ export class Storage {
      * @param {*} key - the key under which the value will be stored
      * @param {*} value - the value to be stored
      */
-    set(key, value) {
+    setItem(key, value) {
         try {
             this.storage.setItem(key, value);
         } catch (error) {
@@ -32,7 +33,7 @@ export class Storage {
      * @param {*} key - The key under which the value is stored.
      * @returns - returns a value.
      */
-    get(key) {
+    getItem(key) {
         const item = this.storage.getItem(key);
         if (item !== null) {
             try {
@@ -49,7 +50,7 @@ export class Storage {
      * Removes a value from the storage with the specified key.
      * @param {*} key - The key under which the value is stored.
      */
-    remove(key) {
+    removeItem(key) {
         this.storage.removeItem(key);
     }
     /**
@@ -58,7 +59,7 @@ export class Storage {
      * @returns {boolean} - True if the value exists, false otherwise.
      */
 
-    exists(key) {
+    existsItem(key) {
         return this.storage.getItem(key) !== null;
     }
 

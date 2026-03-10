@@ -1,0 +1,26 @@
+
+
+{
+
+    "_comment": "If you define like this, you can generate new interpol classes in the head",
+    "gen10": [
+        {
+            "property": "width",
+            "source": "window.innerWidth",
+            "unit": "%",
+            "points": [
+                ["100", "100%"],
+                ["1000", "30%"]
+            ]
+        },
+        {
+            "property": "height",
+            "source": "window.innerHeight",
+            "unit": "%",
+            "points": [
+                ["500", "40"],
+                ["1200", "100"]
+            ]
+        }
+    ]
+}
