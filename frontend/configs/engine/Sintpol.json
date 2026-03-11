@@ -7,6 +7,26 @@
         {
             "property": "width",
             "source": "window.innerWidth",
+            "unit": "px",
+            "points": [
+                ["100", "100%"],
+                ["1000", "30%"]
+            ]
+        },
+        {
+            "property": "height",
+            "source": "window.innerHeight",
+            "unit": "px",
+            "points": [
+                ["500", "40"],
+                ["1200", "100"]
+            ]
+        }
+    ],
+    ".gen11": [
+        {
+            "property": "width",
+            "source": "window.innerWidth",
             "unit": "%",
             "points": [
                 ["100", "100%"],

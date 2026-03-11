@@ -4,7 +4,7 @@ import { DomObserver} from "./services/observer/DomObserver.js";
 import { TwoPointInterpolation } from "./utils/calc/TwoPointInterpolation.js";
 import { JsonObjectConvert} from "./utils/data/convert/JsonObjectConvert.js";
 import { Events } from "./Events.js";
-import { SintpolEngine } from "./services/engine/SintpolEngine.js";
+import { SintpolEngine } from "./services/engine/SintpolEngine/SintpolEngine.js";
 
 export class FunctionDebugger {
     constructor() {
@@ -91,7 +91,7 @@ export class FunctionDebugger {
         console.log("the current num is " + num);
     }
     async debugJsonDelivery() {
-        const { JsonDelivery } = await import("./utils/data/JsonDelivery.js");
+        const { JsonDelivery } = await import("./utils/data/cache/JsonDelivery.js");
         const jd = new JsonDelivery(sessionStorage);
         await console.log(jd.deliver("/frontend/configs/config.json"));
         const demoData = await jd.deliver("/frontend/configs/config.json");
