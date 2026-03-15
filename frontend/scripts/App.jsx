@@ -4,25 +4,17 @@ import { useState } from 'react';
 import Start from './../components/sites/Start.jsx';
 import Loading from"../components/sites/Loading.jsx";
 import SimpleGradient from "../components/elements/Backgrounds/SimpleGradient.jsx";
-
+import Debug from '../components/sites/Debug.jsx';
 
 
 
 export default function App() {
-    const [screen, setScreen] = useState("start");
+    const [screen, setScreen] = useState("debug");
     return (
     <div className="App bg-center" style={{height: "100%", width: "100%"}}>
         {screen === "loading" && <Loading />}
         {screen === "start" && <Start />}
-        
-        <div className='dummyElement' id='dummy1' style={{height: "100px", width: "100px", background: "red"} }
-        data-sintpol="30%,100%,100px,1500px,window.innerWidth">
-        
-        </div>
-        <div className='dummyElement gen11' id='name' style={{background: "red"} }
-        data-sintpol="30%,100%,100px,1000px,window.innerWidth">
-        
-        </div>
+        {screen === "debug" && <Debug />}
     </div>
 
     );
