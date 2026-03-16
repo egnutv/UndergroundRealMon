@@ -2,44 +2,46 @@ import { srcEngine } from "./../../../srcPaths.js";
 import { SintpolCore } from "./SintpolCore.js";
 
 export class SintpolInlineEngine extends SintpolCore{
-    //TODO: Add logic from old Engine inspired
-
-    async start() {
-        let demoRule = `
-                {
-                    "rules": [
-                        {
-                            "property": "width",
-                            "source": "window.innerWidth",
-                            "unit": "px",
-                            "points": [
-                                ["100", "100%"],
-                                ["1000", "30%"]
-                            ]
-                        },
-                        {
-                            "property": "height",
-                            "source": "window.innerHeight",
-                            "unit": "px",
-                            "points": [
-                                ["500", "40"],
-                                ["1200", "100"]
-                            ]
-                        }
-                    ]
-                }
-            `
-        console.log("Output: " + await this.#buildStyling(demoRule))
+    //TODO: Add comments
+    constructor() {
+        super();
+        this.rulesSeparator= "$$$$$"
+        this.rulesStructure = `["$property$", "$size$$unit$"]${this.rulesSeparator}`;
     }
-    async #buildStyling(demoRules) {
+    async start() {
+        await this.#applyingStyling();
+    }
+    async #buildStyling(rules) {
 
-            let jsonFileContent = demoRules;
+            let jsonFileContent = rules;
     
             return await this.buildStyle(jsonFileContent, (styleString, domObject, content) => {
                 const ruleBody = this.buildCssRules(content);
                 return ruleBody;
             });
     }
-}
 
- 
+    async #applyingStyling() {
+    const { DomObserver } = await import("../../observer/DomObserver.js");
+    const domObserver = new DomObserver();
+
+    domObserver.observe(
+        document.body,
+        el => el.getAttribute(this.name) !== null,
+        async (el, controls) => {
+            const rules = el.getAttribute(this.name);
+            let stylingRules = await this.#buildStyling(rules);
+
+            stylingRules = stylingRules.slice(0, -this.rulesSeparator.length).split(this.rulesSeparator);
+
+            for (let i = 0; i < stylingRules.length; i++) {
+                let stylingRule = stylingRules[i];
+                stylingRule = JSON.parse(stylingRule);
+                console.log(stylingRule);
+                el.style[stylingRule[0]] = stylingRule[1];
+            }
+            controls.disconnect();
+        }
+    )
+}
+}

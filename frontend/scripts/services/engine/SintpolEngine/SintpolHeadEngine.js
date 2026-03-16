@@ -2,7 +2,7 @@ import { srcEngine } from "./../../../srcPaths.js";
 import { SintpolCore } from "./SintpolCore.js";
 
 export class SintpolHeadEngine extends SintpolCore {
-
+    //TODO: Add comments
     async start() {
         const headStyles = this.#initialize();
 

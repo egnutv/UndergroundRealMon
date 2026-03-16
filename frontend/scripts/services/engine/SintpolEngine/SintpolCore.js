@@ -1,6 +1,7 @@
 export class SintpolCore {
     constructor(name = "SintpolEngine") {
         this.name = name;
+        this.rulesStructure = "$property$: $size$$unit$; ";
     }
 
     /**
@@ -9,12 +10,14 @@ export class SintpolCore {
      */
     buildCssRules(content) {
         let rules = "";
+        const rulesStructure = this.rulesStructure;
 
         for (let y = 0; y < content.length; y++) {
             const element = content[y];
             const size = 10;
-
-            rules += `${element.property}: ${size}${element.unit}; `;
+            this.#createSize(element.source, element.points);
+            rules += rulesStructure.replace("$property$", element.property).replace("$size$", size).replace("$unit$", element.unit);
+            //rules += `${element.property}: ${size}${element.unit}; `;
         }
 
         return rules;
@@ -39,5 +42,11 @@ export class SintpolCore {
         }
 
         return styleString;
+    }
+
+    #createSize(source, points) {
+        console.log(source);
+        console.log(points);
+        //TODO: Add logic
     }
 }
