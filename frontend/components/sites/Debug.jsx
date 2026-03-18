@@ -10,7 +10,7 @@ export default function Debug() {
         <div className="debug-screen" style={{height: "100%", width: "100%"}}>
             
             <div className='dummyElement' id='dummy1' style={{height: "100px", width: "100px", background: "red"} }
-            SintpolEngine='
+            sintpol-engine='
                 {
                     "rules": [
                         {

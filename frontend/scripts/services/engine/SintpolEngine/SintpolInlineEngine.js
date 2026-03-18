@@ -15,7 +15,7 @@ export class SintpolInlineEngine extends SintpolCore{
 
             let jsonFileContent = rules;
     
-            return await this.buildStyle(jsonFileContent, (styleString, domObject, content) => {
+            return await this.buildStyle(jsonFileContent, async (styleString, domObject, content) => {
                 const ruleBody = this.buildCssRules(content);
                 return ruleBody;
             });

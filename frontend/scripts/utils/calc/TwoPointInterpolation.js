@@ -72,6 +72,7 @@ export class TwoPointInterpolation {
     #validate(initValue, finalValue, initWidth, finalWidth, currentWidth) {
         const array = [initValue, finalValue, initWidth, finalWidth, currentWidth];
         for (let i = 0; i < array.length; i++) {
+            console.log(currentWidth);
             if (typeof array[i] !== 'number' || Number.isNaN(array[i])) {
                 throw new Error(`This value is not a number: ${array[i]}`);
             }

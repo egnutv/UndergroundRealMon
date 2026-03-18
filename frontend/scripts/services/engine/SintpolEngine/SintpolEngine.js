@@ -3,7 +3,7 @@ import { srcEngine } from "./../../../srcPaths.js";
 
 
 export class SintpolEngine {
-    constructor(name = "SintpolEngine") {
+    constructor(name = "sintpol-engine") {
         this.name = name;
     }
 

@@ -32,8 +32,8 @@ export class SintpolHeadEngine extends SintpolCore {
         const { CSSFormatter } = await import("./../../../utils/data/formatter/CSSFormatter.js");
         const cssFormatter = new CSSFormatter();
 
-        return await this.buildStyle(jsonFileContent, (styleString, domObject, content) => {
-            const ruleBody = this.buildCssRules(content);
+        return await this.buildStyle(jsonFileContent, async (styleString, domObject, content) => {
+            const ruleBody = await this.buildCssRules(content);
             return styleString + cssFormatter.format(domObject, ruleBody);
         });
     }
