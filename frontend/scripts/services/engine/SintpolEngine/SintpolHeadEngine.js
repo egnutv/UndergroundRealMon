@@ -26,8 +26,8 @@ export class SintpolHeadEngine extends SintpolCore {
 
 
     async #buildStyleContent() {
-        const { FileDelivery } = await import("./../../../utils/data/cache/FileDelivery.js");
-        let jsonFileContent = await new FileDelivery(sessionStorage).deliver(srcEngine.Sintpol);
+        const { JsonDelivery } = await import("./../../../utils/data/cache/JsonDelivery.js");
+let jsonFileContent = await new JsonDelivery(sessionStorage).deliver(srcEngine.Sintpol);
 
         const { CSSFormatter } = await import("./../../../utils/data/formatter/CSSFormatter.js");
         const cssFormatter = new CSSFormatter();
