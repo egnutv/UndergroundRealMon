@@ -19,22 +19,7 @@ export class SintpolCore {
 
     async buildStyle(jsonFileContent, callback) {
     let j = await jsonFileContent;
-
-    console.log("buildStyle input - typeof:", typeof j, "| value:", j);
-
-    if (typeof j === "string") {
-        try {
-            j = JSON.parse(j);
-        } catch (e) {
-            console.error("buildStyle: invalid JSON input:", j, e);
-            return "";
-        }
-    }
-
-    if (typeof j !== "object" || j === null) {
-        console.error("buildStyle: expected object or JSON string but got:", j);
-        return "";
-    }
+        j = JSON.parse(j);
 
     const domObjects = Object.keys(j).filter(k => k !== "_comment");
     let styleString = "";
@@ -66,14 +51,14 @@ export class SintpolCore {
 
         if (source <= points[0][0]) return points[0][1];
         if (source >= points[points.length - 1][0]) return points[points.length - 1][1];
-
+        const tpi = new TwoPointInterpolation();
         for (let i = 0; i < points.length - 1; i++) {
             const [startWidth, startValue] = points[i];
             const [endWidth, endValue] = points[i + 1];
 
             if (source >= startWidth && source <= endWidth) {
-                const tpi = new TwoPointInterpolation(startValue, endValue, startWidth, endWidth, source);
-                return tpi.calc();
+
+                return tpi.calc(startValue, endValue, startWidth, endWidth, source);
             }
         }
 

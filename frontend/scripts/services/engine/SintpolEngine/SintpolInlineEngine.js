@@ -37,7 +37,6 @@ export class SintpolInlineEngine extends SintpolCore{
             for (let i = 0; i < stylingRules.length; i++) {
                 let stylingRule = stylingRules[i];
                 stylingRule = JSON.parse(stylingRule);
-                console.log(stylingRule);
                 el.style[stylingRule[0]] = stylingRule[1];
             }
             controls.disconnect();

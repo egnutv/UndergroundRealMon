@@ -11,11 +11,10 @@ export class FileDelivery {
             return s.getItem(url)
         } else {
             const { Fetching } = await import("./../Fetching.js");
-            const fetchData = await new Fetching(Response.prototype.json).fetch(url);
+            const fetchData = await new Fetching(Response.prototype.text).fetch(url);
 
             s.setItem(url, fetchData);
             return fetchData;
         }
     }
-    
 }
