@@ -1,9 +1,9 @@
 {
     "langsPaths": {
-        "global": "global.json",
+        "global": "global.yaml",
 
         "specific": {
-            "global": "$lang$/global.json",
+            "global": "$lang$/general.yaml",
             "game:": {
                 "name": "$lang$/game/names.json"
             }

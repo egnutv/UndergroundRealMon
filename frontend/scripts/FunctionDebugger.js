@@ -32,7 +32,7 @@ export class FunctionDebugger {
         this.testTwoPointInterpolation();
         await this.testStorageFetch();
         new SintpolEngine().start()
-        await this.debugJsonDelivery();
+        //await this.debugJsonDelivery();
         
     }
 
@@ -90,7 +90,7 @@ export class FunctionDebugger {
         let num = twoPointInterpolation.calc(10, 90, 800, 3300, window.innerWidth);
         console.log("the current num is " + num);
     }
-    async debugJsonDelivery() {
+   /* async debugJsonDelivery() {
         const { JsonDelivery } = await import("./utils/data/cache/JsonDelivery.js");
         const jd = new JsonDelivery(sessionStorage);
         await console.log(jd.deliver("/frontend/configs/config.json"));
@@ -98,6 +98,6 @@ export class FunctionDebugger {
         console.log("DemoData: " +  demoData.design_mode.added);
         let demoDataVal = demoData.design_mode.added;
         console.log(demoDataVal.length);
-    }
+    }*/
 
 }

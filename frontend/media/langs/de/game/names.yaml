@@ -1,0 +1,42 @@
+character_names:
+  player:
+    f:
+      n: Laurina Ahornbaum
+    m:
+      n: Lars Ahornbaum
+    nb:
+      n: Luca Ahornbaum
+  professor_leaves:
+    n: Prof. Blattwerk
+  professor_fern:
+    n: Prof. Farnkraut
+  professor_moss:
+    n: Prof. Moosblatt
+  doctor_ivy:
+    n: Dr. Efeublatt
+  doctor_bamboo:
+    n: Dr. Bambusblatt
+  doctor_cactus:
+    n: Dr. Kaktusblatt
+realmon_names:
+  bear:
+    s: Bär
+    p: Bären
+  cat:
+    s: Katze
+    p: Katzen
+  dog:
+    s: Hund
+    p: Hunde
+  frog:
+    s: Frosch
+    p: Frösche
+  mouse:
+    s: Maus
+    p: Mäuse
+  rabbit:
+    s: Kaninchen
+    p: Kaninchen
+  wolf:
+    s: Wolf
+    p: Wölfe
