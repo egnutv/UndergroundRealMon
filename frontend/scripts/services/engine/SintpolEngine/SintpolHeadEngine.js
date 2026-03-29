@@ -2,6 +2,10 @@ import { srcEngine } from "./../../../srcPaths.js";
 import { SintpolCore } from "./SintpolCore.js";
 
 export class SintpolHeadEngine extends SintpolCore {
+    constructor(name, path = srcEngine.Sintpol) {
+        super(name);
+        this.path = path //?? srcEngine.Sintpol;
+    }
     //TODO: Add comments
     async start() {
         const headStyles = this.#initialize();
@@ -26,7 +30,7 @@ export class SintpolHeadEngine extends SintpolCore {
 
     async #buildStyleContent() {
         const { FileDelivery } = await import("./../../../utils/data/cache/FileDelivery.js")
-        let jsonFileContent = await new FileDelivery(sessionStorage).deliver(srcEngine.Sintpol);
+        let jsonFileContent = await new FileDelivery(sessionStorage).deliver(this.path);
 
         const { CSSFormatter } = await import("./../../../utils/data/formatter/CSSFormatter.js");
         const cssFormatter = new CSSFormatter();

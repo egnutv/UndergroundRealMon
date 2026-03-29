@@ -38,8 +38,25 @@ export default function Debug() {
             
             </div>
             <div className='dummyElement gen11' id='dummy2' style={{background: "red"} }
-            >
             
+            >
+                <p
+                lang-engine='sites:start.title'
+                >
+                    DummyText
+                </p>
+                {/*
+                <p
+                lang-engine='
+                {
+                    "key": "sites:start.title",
+                    "value": "Current Text"
+                }
+                '
+                >
+                    DummyText
+                </p>
+                */}
             </div>
         </div>
 

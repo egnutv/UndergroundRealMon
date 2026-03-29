@@ -1,5 +1,6 @@
 import { srcEngine } from "./../../../srcPaths.js";
 import { SintpolCore } from "./SintpolCore.js";
+import { DomObserver } from "../../observer/DomObserver";
 
 export class SintpolInlineEngine extends SintpolCore{
     //TODO: Add comments
@@ -7,6 +8,8 @@ export class SintpolInlineEngine extends SintpolCore{
         super();
         this.rulesSeparator= "$$$$$"
         this.rulesStructure = `["$property$", "$size$$unit$"]${this.rulesSeparator}`;
+
+        this.DomObserver = new DomObserver;
     }
     async start() {
         await this.#applyingStyling();
@@ -22,8 +25,8 @@ export class SintpolInlineEngine extends SintpolCore{
     }
 
     async #applyingStyling() {
-    const { DomObserver } = await import("../../observer/DomObserver.js");
-    const domObserver = new DomObserver();
+    
+    const domObserver = this.DomObserver;
 
     domObserver.observe(
         document.body,

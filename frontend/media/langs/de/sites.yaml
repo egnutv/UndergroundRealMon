@@ -1,0 +1,19 @@
+start:
+    title: Willkommen zu Underground RealMon!
+    subtitle: Eine Parodie auf das beste Spiel aller Zeiten
+credits:
+  title: Credits
+  subtitle: Die Leute die Mitwirkten
+  developers: Entwickler
+  designers: Designer
+  testers: Tester
+  sounds: Sounds
+  audio: Audio
+  music: Musik
+  contributors: Mitwirkende
+  license: Lizenz
+  sources: Quellen
+  source_code: Quellcode
+settings:
+  title: Einstellungen
+  subtitle: Verwalte deine Einstellungen

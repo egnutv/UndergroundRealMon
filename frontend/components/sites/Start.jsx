@@ -8,17 +8,23 @@ export default function Start() {
 
     return (
         <div className="start-screen">
-            <h1>
-                Willkommen zu Underground RealMon
-            </h1>
+            
 
             <div 
-            className="container"
-            style={{ display: "flex", flexDirection: "column", gap: "1rem", width: "50%" }}>
+            className="container dyn-area bg-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            style={{ display: "flex", flexDirection: "column", gap: "1rem"}}>
 
-
+                <h1>
+                Underground RealMon
+                </h1>
                 <Button>
                     Starten
+                </Button>
+                <Button>
+                    Einstellungen
+                </Button>
+                <Button>
+                    Beenden
                 </Button>
 
             </div>

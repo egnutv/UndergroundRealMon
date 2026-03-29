@@ -3,5 +3,8 @@ export const srcConfig = {
     
 }
 export const srcEngine =  {
-    Sintpol: "/frontend/configs/engine/Sintpol.json"
+    Sintpol: "/frontend/configs/engine/Sintpol.json",
+    langPaths: "/frontend/media/langs/index.json"
 }
+
+

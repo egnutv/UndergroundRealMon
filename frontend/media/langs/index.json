@@ -1,12 +1,14 @@
 {
-    "langsPaths": {
-        "global": "global.yaml",
-
-        "specific": {
-            "global": "$lang$/general.yaml",
-            "game:": {
-                "name": "$lang$/game/names.json"
-            }
-        }
+    "global": {
+        "p": "/frontend/media/langs/global.yaml"
+    },
+    "general": {
+        "p": "/frontend/media/langs/$lang$/general.yaml"
+    },
+    "sites": {
+        "p": "/frontend/media/langs/$lang$/sites.yaml"
+    },
+    "game_names": {
+        "p": "/frontend/media/langs/$lang$/game/names.yaml"
     }
 }
