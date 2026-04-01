@@ -3,6 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./../styles/root.css";
+import { sysLib } from "./sysLib.js";
 
 import {FunctionDebugger} from "./FunctionDebugger.js";
 
@@ -12,7 +13,7 @@ export class Main {
     }
 
     async start() {
-
+        window.sysLib = sysLib;
         const functionTestScript = new FunctionDebugger();
         functionTestScript.start();
 

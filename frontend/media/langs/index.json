@@ -1,14 +1,6 @@
 {
-    "global": {
-        "p": "/frontend/media/langs/global.yaml"
-    },
-    "general": {
-        "p": "/frontend/media/langs/$lang$/general.yaml"
-    },
-    "sites": {
-        "p": "/frontend/media/langs/$lang$/sites.yaml"
-    },
-    "game_names": {
-        "p": "/frontend/media/langs/$lang$/game/names.yaml"
-    }
+    "global": "/frontend/media/langs/global.yaml",
+    "general": "/frontend/media/langs/$lang$/general.yaml",
+    "sites":"/frontend/media/langs/$lang$/sites.yaml",
+    "game_names": "/frontend/media/langs/$lang$/game/names.yaml"
 }

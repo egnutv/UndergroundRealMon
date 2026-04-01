@@ -1,4 +1,4 @@
-class DomObserver {
+export class DomObserver {
     /**
      * Observes DOM changes and runs a callback when a matching element appears.
      *
@@ -69,4 +69,4 @@ class DomObserver {
     }
 }
 
-export { DomObserver };
+//export { DomObserver };

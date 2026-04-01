@@ -1,3 +1,5 @@
+import { utils } from "../../../utils/utils.js";
+
 export class SintpolCore {
     constructor(name = "sintpol-engine") {
         this.name = name;
@@ -33,8 +35,7 @@ export class SintpolCore {
     return styleString;
 }
     async #createSize(source, points) {
-        const { TwoPointInterpolation } = await import("./../../../utils/calc/TwoPointInterpolation.js");
-
+        const { TwoPointInterpolation } = await utils.calc.TwoPointInterpolation();
         if (typeof source === "string") {
             try {
                 source = Function(`return ${source}`)();
