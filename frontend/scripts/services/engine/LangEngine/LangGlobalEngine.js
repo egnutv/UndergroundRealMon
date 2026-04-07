@@ -1,7 +1,4 @@
 import { LangCore } from "./LangCore.js";
-import { DomObserver } from "../../observer/DomObserver.js";
-import { FileDelivery } from "../../../utils/data/cache/FileDelivery.js";
-import { Parsing } from "../../../utils/data/convert/Parsing.js";
 
 export class LangGlobalEngine extends LangCore {
     constructor(name = "lang-engine") {

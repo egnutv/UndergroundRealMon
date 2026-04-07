@@ -1,5 +1,5 @@
 start:
-    title: Willkommen zu Underground RealMon!
+    title: Willkommen zu $global:game_name$!
     subtitle: Eine Parodie auf das beste Spiel aller Zeiten
 credits:
   title: Credits
