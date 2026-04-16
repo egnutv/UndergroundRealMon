@@ -41,7 +41,7 @@ export default function Debug() {
             
             >
                 <p
-                lang-engine='sites:start.title'
+                lang-engine='p:sites:start.title'
                 >
                     DummyText
                 </p>

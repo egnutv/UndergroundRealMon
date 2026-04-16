@@ -21,16 +21,27 @@ export class TextCore {
     }
 
     async buildText(key, replacement) {
+        console.log(key);
         let text = await this.deliverText(key);
-        const matches = text.match(/\$(.*?)§/g);
+        let matches = null;
+        console.log(text);
+        matches = (text ?? "").match(/\$(.*?)\$/g);
         if (!Array.isArray(matches)) {
+            if (replacement !== undefined) {
+                return replacement;
+            }
             return text;
         }
-        if (text.includes(startsWith(this.pO + this.trimmer))) {
+        console.log(matches);
+        if (text.includes((this.pO + this.trimmer))) {
             for (const match of matches) {
-                
+
+                const t = await this.deliverText((match.remove("$")));
+                text = text.replace(match, t);
             }
+            return text;
         }
+        //return null;
     }
 
 
@@ -49,37 +60,39 @@ export class TextCore {
         if (keyValues.length > 3 || keyValues.length === 0 ) {
             this.#invalKey(key);
         }
-        //p:global:game_name
-        //s:customValue
-        
-        switch (key) {
-            case key.startsWith(this.proO + this.trimmer):
+        //return "X";
+        let value = null;
+        const instruction = keyValues[0];
+        switch (instruction) {
+            case this.proO:
                 console.warn(`The key ${key} is protected and cannot be used to set values.`);
                 return;
-                break;
-            case key.startsWith(this.sO + this.trimmer):
-                return key.split(this.trimmer)[1];
-                break;
-            case key.startsWith(this.pO + this.trimmer):
-                const [pO, index, k] = key.split(this.trimmer);
+            case this.sO:
+                return keyValues[1];
+            case this.pO:
+                const [pO, index, k] = keyValues;
+                console.log(index);
+                console.log(k);
                 const indexFile = await  this.FileDelivery.deliver(this.indexPath);
+                console.log(indexFile);
                 const indexData = this.Parsing.json(indexFile);
-                let path = indexData[index].p;
-                const lang = await this.#getLang();
-                if (path.includes(this.specificLangParameter)) {
-                    path = path.replace(this.specificLangParameter, lang);
+                console.log(indexData);
+                let p = indexData[index];
+                console.log(p);
+                if (p.includes(this.specificLangParameter)) {
+                    const lang = await this.#getLang();
+                    p = p.replace(this.specificLangParameter, lang);
                 }
-                const textFile = await this.FileDelivery.deliver(path);
+                console.log(p);
+                const textFile = await this.FileDelivery.deliver(p);
+                console.log(textFile);
                 const parsed = this.Parsing.yaml(textFile);
-                const value = k.split(".").reduce((obj, key) => obj?.[key], parsed);
-                
+                console.log(parsed);
+                value = k.split(".").reduce((obj, key) => obj?.[key], parsed);
+                console.log(value);
                 return value;
                 break;
-        
-            default:
-                this.#invalKey(key);
         }
-
     }
 
     #invalKey (key) {

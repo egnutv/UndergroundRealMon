@@ -31,7 +31,8 @@ export class FunctionDebugger {
         this.testObserver();
         this.testTwoPointInterpolation();
         await this.testStorageFetch();
-        await this.debugLang();
+        //await this.debugLang();
+        await this.debugText();
         new SintpolEngine().start()
         
         //await this.debugJsonDelivery();
@@ -92,10 +93,15 @@ export class FunctionDebugger {
         let num = twoPointInterpolation.calc(10, 90, 800, 3300, window.innerWidth);
         console.log("the current num is " + num);
     }
-    async debugLang() {
+    async debugLang() {/*
         const { LangEngine } = await import("./services/engine/LangEngine/LangEngine.js");
         const lE = new LangEngine();
-        await lE.start();
+        await lE.start();*/
+    }
+    async debugText() {
+        const { TextEngine } = await import("./services/engine/TextEngine/TextEngine.js");
+        const tE = new TextEngine();
+        await tE.start();
     }
     /* async debugJsonDelivery() {
         const { JsonDelivery } = await import("./utils/data/cache/JsonDelivery.js");
