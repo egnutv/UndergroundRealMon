@@ -22,8 +22,9 @@ export class TextGlobalEngine extends TextCore {
                 const key = el.getAttribute(this.name);
 
                 console.log(key);
-                const text = await this.buildText(key);
-                el.textContent = text;
+                const t = await this.build(key);
+                console.log("Thats was unresolved: " + t.unresolved);
+                el.textContent = t.text;
             }
         )
     }

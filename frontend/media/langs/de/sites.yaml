@@ -1,6 +1,6 @@
 start:
-    title: Willkommen zu $global:game_name$!
-    subtitle: Eine Parodie auf das beste Spiel aller Zeiten
+    title: Willkommen zu $p:sites:start.subtitle$!
+    subtitle:  $p:global:game_name$ - eine Parodie auf das beste Spiel aller Zeiten $s:number$
 credits:
   title: Credits
   subtitle: Die Leute die Mitwirkten
