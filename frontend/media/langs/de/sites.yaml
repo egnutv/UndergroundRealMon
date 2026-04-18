@@ -1,6 +1,6 @@
 start:
-    title: Willkommen zu $p:sites:start.subtitle$!
-    subtitle:  $p:global:game_name$ - eine Parodie auf das beste Spiel aller Zeiten $s:number$
+    title: Willkommen zum Spiel Underground RealMon!
+    subtitle:  Dieses Spiel ist eine Parodie auf bekannte Monsterfangspiele.
 credits:
   title: Credits
   subtitle: Die Leute die Mitwirkten

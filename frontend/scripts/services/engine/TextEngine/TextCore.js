@@ -35,8 +35,8 @@ export class TextCore {
         console.log(text);
         let matches = null;
         matches = (text ?? "").match(/\$(.*?)\$/g);
-        if (!Array.isArray(matches)) {
-            return text;
+        if (String(matches) ) {
+            matches = ["$" + matches + "$"];
         }
         let k = matches?.map(match => match.replaceAll("$", ""));
         console.log(k);
