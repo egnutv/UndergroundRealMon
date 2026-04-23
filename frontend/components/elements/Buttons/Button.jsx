@@ -5,7 +5,11 @@ export default function Button(props) {
 
 
     return (
-        <button className="bg-amber-700 text-white px-4 py-2 rounded-lg overflow-auto">
+        <button 
+        {...props}
+            className={`px-4 py-2 rounded-lg overflow-auto cursor-pointer ${props.className || ""}`}
+            
+        >
             {props.children}
         </button>
     );

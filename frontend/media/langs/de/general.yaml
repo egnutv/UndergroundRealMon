@@ -24,3 +24,4 @@ design_mode:
   info: 'Wechseln zum Farbschema: $design_mode$'
   dark: Dunkel
   light: Hell
+exit: Beenden

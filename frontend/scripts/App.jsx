@@ -9,7 +9,7 @@ import Debug from '../components/sites/Debug.jsx';
 
 
 export default function App() {
-    const [screen, setScreen] = useState("debug");
+    const [screen, setScreen] = useState("start");
     return (
     <div className="App bg-center" style={{height: "100%", width: "100%"}}>
         {screen === "loading" && <Loading />}

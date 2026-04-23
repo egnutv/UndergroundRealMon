@@ -8,26 +8,50 @@ export default function Start() {
 
     return (
         <div className="start-screen">
+            <div style={{background: "yellow", position: "absolute", top: "0", left: "0", height: "100%", width: "100%"}}>
+                <SimpleGradient gradient={"var(--night-gradient)"}>
+                </SimpleGradient>
+            </div>
             
-
             <div 
             className="container dyn-area bg-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-            style={{ display: "flex", flexDirection: "column", gap: "1rem"}}>
+            style={{ display: "flex", flexDirection: "column", gap: "1rem", padding: "2rem", borderRadius: "1rem" }}>
 
-                <h1>
+                <h1 lang-engine='p:sites:start.title'  style={{color: "var(--primary-text-color"}}>
                 Underground RealMon
                 </h1>
-                <Button>
-                    Starten
+                <Button className="start-button bg-[var(--primary-color)] hover:bg-[var(--tertiary-color)]">
+                    <p lang-engine='p:general:start' style={{color: "var(--primary-text-color"}}>
+
+                    </p >
+                </Button >
+                <Button className="settings-button bg-[var(--primary-color)] hover:bg-[var(--tertiary-color)]">
+                    <p lang-engine='p:general:settings' style={{color: "var(--primary-text-color"}}>
+
+                    </p >
                 </Button>
-                <Button>
-                    Einstellungen
-                </Button>
-                <Button>
-                    Beenden
+                <Button className="exit-button bg-[var(--primary-color)] hover:bg-[var(--tertiary-color)]">
+                    <p lang-engine='p:general:exit' style={{color: "var(--primary-text-color"}}>
+
+                    </p >
                 </Button>
 
             </div>
+            <style>
+                {`
+                    .start-button:hover {
+                        background: var(--tertiary-color);
+                    }
+                    .settings-button:hover {
+                        background: var(--tertiary-color);
+                    }
+                    .exit-button:hover {
+                        background: var(--tertiary-color);
+                    }
+                `}
+            </style>
+        
         </div>
+        
     );
 }

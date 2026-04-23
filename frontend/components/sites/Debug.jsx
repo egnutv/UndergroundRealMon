@@ -45,6 +45,14 @@ export default function Debug() {
                 >
                     DummyText
                 </p>
+                <button
+                lang-engine='p:general:settings'
+                >
+                    DummyText
+                </button>
+                {/**
+                 * lang-engine='p:general:settings'
+                 */}
                 {/*
                 <p
                 lang-engine='

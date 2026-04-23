@@ -8,7 +8,7 @@ export default function SimpleGradient(props) {
 
     return (
 
-        <div className="loading-screen" style={{height: "100%", width: "100%", backgroundImage: props.gradient}}>
+        <div className="gradient" style={{minHeight: "100%", minWidth: "100%", backgroundImage: props.gradient}}>
         </div>
 
     );
