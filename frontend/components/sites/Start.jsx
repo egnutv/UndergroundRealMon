@@ -8,10 +8,7 @@ export default function Start() {
 
     return (
         <div className="start-screen">
-            <div style={{background: "yellow", position: "absolute", top: "0", left: "0", height: "100%", width: "100%"}}>
-                <SimpleGradient gradient={"var(--night-gradient)"}>
-                </SimpleGradient>
-            </div>
+   
             
             <div 
             className="container dyn-area bg-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
