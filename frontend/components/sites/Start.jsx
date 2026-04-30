@@ -5,7 +5,19 @@ import IconButton from "../elements/Buttons/IconButton.jsx";
 import SimpleGradient from "../elements/Backgrounds/SimpleGradient.jsx";
 
 export default function Start() {
-
+    const buttonClasses = 
+    `
+    button bg-[var(--primary-color)] 
+    hover:bg-[var(--tertiary-color)] 
+    hover:transition-colors 
+    duration-1000
+    hover:duration-500
+    active:bg-white
+    active:duration-500
+    active:scale-95
+    active:scale-80 active:duration-75
+    `
+    ;
     return (
         <div className="start-screen">
    
@@ -17,17 +29,17 @@ export default function Start() {
                 <h1 lang-engine='p:sites:start.title'  style={{color: "var(--primary-text-color"}}>
                 Underground RealMon
                 </h1>
-                <Button className="start-button bg-[var(--primary-color)] hover:bg-[var(--tertiary-color)]">
+                <Button className={`${buttonClasses} start-button`}>
                     <p lang-engine='p:general:start' style={{color: "var(--primary-text-color"}}>
 
                     </p >
                 </Button >
-                <Button className="settings-button bg-[var(--primary-color)] hover:bg-[var(--tertiary-color)]">
+                <Button className={`${buttonClasses} settings-button`}>
                     <p lang-engine='p:general:settings' style={{color: "var(--primary-text-color"}}>
 
                     </p >
                 </Button>
-                <Button className="exit-button bg-[var(--primary-color)] hover:bg-[var(--tertiary-color)]">
+                <Button className={`${buttonClasses} exit-button`}>
                     <p lang-engine='p:general:exit' style={{color: "var(--primary-text-color"}}>
 
                     </p >
@@ -35,17 +47,7 @@ export default function Start() {
 
             </div>
             <style>
-                {`
-                    .start-button:hover {
-                        background: var(--tertiary-color);
-                    }
-                    .settings-button:hover {
-                        background: var(--tertiary-color);
-                    }
-                    .exit-button:hover {
-                        background: var(--tertiary-color);
-                    }
-                `}
+                
             </style>
         
         </div>
