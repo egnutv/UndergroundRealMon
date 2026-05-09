@@ -16,7 +16,7 @@ export default function Wildlife(props) {
             
             <layer>
                 <div
-                    className="sun rounded-full blur-2xl dymBG dymBG2"
+                    className="sun rounded-full blur-2xl"
                     style={{
                         height: "10rem",
                         width: "10rem",
@@ -27,18 +27,18 @@ export default function Wildlife(props) {
 
             <layer>
                 <div className="cloudLayer">
-                    <cloud className="cloud1 dymBG dymBG2"></cloud>
+                    <cloud className="cloud1"></cloud>
                 </div>
             </layer>
 
             <layer>
-                <div className="cloudLayer ">
-                    <cloud className="cloud2 dymBG dymBG2"></cloud>
+                <div className="cloudLayer">
+                    <cloud className="cloud2"></cloud>
                 </div>
             </layer>
 
             <layer>
-                <landscape className="dymBG dymBG2"></landscape>
+                <landscape></landscape>
             </layer>
 
             <style>
@@ -58,10 +58,9 @@ export default function Wildlife(props) {
                         width: 100%;
                         height: 100%;
 
-                        background-size: 100%;
+                        background-size: cover;
                         background-position: center;
                         overflow: visible;
-                        
                     }
                     cloud {
                         

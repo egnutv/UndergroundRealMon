@@ -12,8 +12,16 @@ export class SintpolCore {
 
         for (let y = 0; y < content.length; y++) {
             const element = content[y];
-            let size = (await this.#createSize(element.source, element.points)).toString();
-            rules += rulesStructure.replace("$property$", element.property).replace("$size$", size).replace("$unit$", element.unit);
+            if(element.cssVar) {
+                //rules += "null";
+                let cssVar = element.cssVar;
+                let size = (await this.#createSize(element.source, element.points)).toString();
+                rules += cssVar.replace("$size$", size);
+            } else {
+                let size = (await this.#createSize(element.source, element.points)).toString();
+                rules += rulesStructure.replace("$property$", element.property).replace("$size$", size).replace("$unit$", element.unit);
+            }
+            
         }
 
         return rules;

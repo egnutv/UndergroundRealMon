@@ -54,5 +54,37 @@
                 ["1500", "50"]
             ]
         }
+    ],
+    ".yes": [
+        {   
+            "cssVar": "width: $size$%;",
+            "source": "window.innerWidth",
+            "points": [
+                ["100", "100"],
+                ["1000", "70"],
+                ["1500", "50"]
+            ]
+        }
+    ],
+    ".dymBG": [
+        {   
+            "cssVar": "transform: scale($size$);",
+            "source": "window.innerWidth",
+            "points": [
+                ["200", "9"],
+                ["1500", "1"]
+            ]
+        }
+    ],
+    ".dymBG2": [
+        {   
+            "cssVar": "opacity: $size$;",
+            "source": "window.innerWidth",
+            "points": [
+                ["650", "0"],
+                ["1000", "0.5"],
+                ["1500", "1"]
+            ]
+        }
     ]
 }
