@@ -6,28 +6,59 @@ import Loading from"../components/sites/Loading.jsx";
 import SimpleGradient from "../components/elements/Backgrounds/SimpleGradient.jsx";
 import Wildlife from "../components/elements/Backgrounds/Wildlife.jsx";
 import Debug from '../components/sites/Debug.jsx';
+//import site from './controller/SiteController.js';
 
 
 
 export default function App() {
     const [screen, setScreen] = useState("start");
     const [background, setBackground] = useState("wildlife");
+
+    
+    const site = (screenName) => {
+
+        switch(screenName) {
+            case "start":
+                return {
+                    screen: screenName,
+                    background: "wildlife"
+                };
+
+            case "loading":
+                return {
+                    screen: screenName,
+                    background: "default"
+                };
+
+            case "debug":
+                return {
+                    screen: screenName,
+                    background: "default"
+                };
+
+            default:
+                return {
+                    screen: "debug",
+                    background: "wildlife"
+                };
+        }
+    };
+    const current = site(screen);
     return (
         
     <div className="App bg-center" style={{height: "100%", width: "100%"}}>
         <background style={{background: "yellow", position: "absolute", top: "0", left: "0", height: "100%", width: "100%"}}>
-            {background === "default" && <SimpleGradient gradient={"var(--night-gradient)"}></SimpleGradient>}
-            {background === "wildlife" && <Wildlife />}
+            {current.background === "default" && <SimpleGradient gradient={"var(--night-gradient)"}></SimpleGradient>}
+            {current.background === "wildlife" && <Wildlife />}
 
         </background>
-        <ui>
-            {screen === "loading" && <Loading />}
-            {screen === "start" && <Start />}
-            {screen === "debug" && <Debug />}
+        <ui style={{position: "absolute", top: "0", left: "0", height: "100%", width: "100%"}}>
+            {current.screen === "loading" && <Loading site={setScreen} />}
+            {current.screen === "start" && <Start site={setScreen} />}
+            {current.screen === "debug" && <Debug site={setScreen}/>}
         </ui>
         
     </div>
 
     );
 }
-

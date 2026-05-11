@@ -1,75 +1,34 @@
 import React, { Component } from 'react';
+import Button from "../elements/Buttons/Button.jsx";
 
-export default function Debug() {
+export default function Debug({ site }) {
 
-
+    const buttonClasses = 
+    `
+    button bg-[var(--primary-color)] 
+    hover:bg-[var(--tertiary-color)] 
+    hover:transition-colors 
+    duration-1000
+    hover:duration-500
+    active:bg-white
+    active:duration-500
+    active:scale-95
+    active:scale-80 active:duration-75
+    `
+    ;
 
     return (
 
         
-        <div className="debug-screen" style={{height: "100%", width: "100%"}}>
-            
-            <div className='dummyElement' id='dummy1' style={{height: "100px", width: "100px", background: "red"} }
-            sintpol-engine='
-                {
-                    "rules": [
-                        {
-                            "property": "width",
-                            "source": "window.innerWidth",
-                            "unit": "px",
-                            "points": [
-                                ["100", "100"],
-                                ["1000", "30"]
-                            ]
-                        },
-                        {
-                            "property": "height",
-                            "source": "window.innerHeight",
-                            "unit": "px",
-                            "points": [
-                                ["500", "40"],
-                                ["1200", "100"]
-                            ]
-                        }
-                    ]
-                }
-            '
-            >
-            
-            </div>
-            <div className='dummyElement gen11' id='dummy2' style={{background: "red"} }
-            
-            >
-                <p
-                lang-engine='p:sites:start.title'
+        <div className="debug-screen" style={{height: "100%", width: "100%", background: "white"}}>
+            <div style={{height: "100%", width: "100%", backgroundColor: "white"}}>
+                <Button className={`${buttonClasses} settings-button` } 
+                        onClick={() => site("start")}
                 >
-                    DummyText
-                </p>
-                <button
-                lang-engine='p:general:settings'
-                >
-                    DummyText
-                </button>
-                {/**
-                 * lang-engine='p:general:settings'
-                 */}
-                {/*
-                <p
-                lang-engine='
-                {
-                    "key": "sites:start.title",
-                    "value": "Current Text"
-                }
-                '
-                >
-                    DummyText
-                </p>
-                */}
-            </div>
-            <div>
-                <p>
-                    
-                </p>
+                    <p lang-engine='p:general:settings' style={{color: "var(--primary-text-color"}}>
+
+                    </p >
+                </Button>
             </div>
         </div>
 
