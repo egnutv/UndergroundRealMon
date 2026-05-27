@@ -6,12 +6,13 @@ import Loading from"../components/sites/Loading.jsx";
 import SimpleGradient from "../components/elements/Backgrounds/SimpleGradient.jsx";
 import Wildlife from "../components/elements/Backgrounds/Wildlife.jsx";
 import Debug from '../components/sites/Debug.jsx';
+import Settings from '../components/sites/Settings.jsx';
 //import site from './controller/SiteController.js';
 
 
 
 export default function App() {
-    const [screen, setScreen] = useState("start");
+    const [screen, setScreen] = useState("settings");
     const [background, setBackground] = useState("wildlife");
 
     
@@ -35,6 +36,11 @@ export default function App() {
                     screen: screenName,
                     background: "default"
                 };
+            case "settings":
+                return {
+                    screen: screenName,
+                    background: "wildlife"
+                };
 
             default:
                 return {
@@ -56,6 +62,7 @@ export default function App() {
             {current.screen === "loading" && <Loading site={setScreen} />}
             {current.screen === "start" && <Start site={setScreen} />}
             {current.screen === "debug" && <Debug site={setScreen}/>}
+            {current.screen === "settings" && <Settings site={setScreen} />}
         </ui>
         
     </div>
